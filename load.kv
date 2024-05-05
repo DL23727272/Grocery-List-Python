@@ -1,0 +1,53 @@
+MDScreen:
+
+    MDBottomNavigation:
+        #panel_color: "#eeeaea"
+        selected_color_background: "orange"
+        text_color_active: "lightgrey"
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Items'
+            icon: 'basket'
+
+            BoxLayout: 
+                orientation: 'vertical'
+                MDBoxLayout:
+                    padding:2
+                    spacing:10
+                    size_hint_y:0.2
+
+                    MDTextField:
+                        id:inputtodo
+                        hint_text:"What do you want to buy"
+                        required:True
+                        mode:"fill"
+                        size_hint_x: 0.6
+                    MDRaisedButton:
+                        text:"Add"
+                        md_bg_color:"orange"
+                        on_release:app.addnewtodo(inputtodo.text)
+
+                MDBoxLayout:
+                    size_hint_x:0.9
+                    MDScrollView:
+                        MDList:
+                            id:todo_list
+
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'About'
+            icon: 'information'
+
+            MDLabel:
+                text: 'information about devs'
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'System Info'
+            icon: 'application'
+
+            MDLabel:
+                text: 'System Info'
+                halign: 'center'
