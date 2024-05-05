@@ -9,14 +9,19 @@ MDScreen:
             name: 'screen 1'
             text: 'Items'
             icon: 'basket'
-
+            Image:
+                source: "logo.png"
+                size_hint: None, None
+                width: "80dp"
+                height: "80dp"
+                pos_hint: {'center_x': .5, 'center_y': .9}
             BoxLayout: 
                 orientation: 'vertical'
                 MDBoxLayout:
                     padding:2
                     spacing:10
-                    size_hint_y:0.2
-
+                    size_hint_y:0.4
+                   
                     MDTextField:
                         id:inputtodo
                         hint_text:"What do you want to buy"
@@ -46,8 +51,19 @@ MDScreen:
             icon: 'information'
 
             MDLabel:
-                text: 'information about devs'
+                text: 'INFORMATION ABOUT DEVS'
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .7}
+                bold: True
+                
+            MDLabel:
+                text: '  Geraldine T. Cabasa'
                 halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .6}
+            MDLabel:
+                text: 'Mia Anzella D. Alisdan  '
+                halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .5}
 
         MDBottomNavigationItem:
             name: 'screen 3'
@@ -57,3 +73,26 @@ MDScreen:
             MDLabel:
                 text: 'System Info'
                 halign: 'center'
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .7}
+                bold: True
+            MDLabel:
+                text: 'Grocery Notes is your handy tool for making shopping lists on the go. With easy list management and quick item entry, never forget a grocery item again.'
+                halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .6}
+
+        MDBottomNavigationItem:
+            name: 'screen 4'
+            text: 'System Help'
+            icon: 'application-braces-outline'
+
+            MDLabel:
+                text: 'System Help'
+                halign: 'center'
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .7}
+                bold: True
+            MDLabel:
+                text: " Need a hand? Check out our Help section for tips on using Grocery Notes efficiently. If you're stuck or have suggestions, drop us a line in the app!"
+                halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .6}
