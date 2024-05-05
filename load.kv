@@ -34,6 +34,12 @@ MDScreen:
                         MDList:
                             id:todo_list
 
+			MDFloatingActionButton:
+				icon: "logout"
+				md_bg_color: "orange"
+				pos_hint: {"center_x": .9, "center_y": .1}
+				on_release: app.logout_button()
+
         MDBottomNavigationItem:
             name: 'screen 2'
             text: 'About'

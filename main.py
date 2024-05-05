@@ -11,6 +11,9 @@ import uuid
 from database import Database
 from kivy.core.window import Window
 
+import subprocess
+import os
+
 class MyBasket(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -98,7 +101,11 @@ class MyBasket(MDApp):
         for child in todo_list.children:
             if child.id == todo_id:
                 todo_list.remove_widget(child)
-
+                
+    def logout_button(self):
+            subprocess.Popen(["python", "login.py"])
+            os._exit(0)
+  
 if __name__ == "__main__":
     Window.size = (368, 640)
     MyBasket().run()
